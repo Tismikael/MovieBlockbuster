@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MovieBlockbuster</string>
+    <string name="playing_now">Movies airing currently in the theaters</string>
+    <string name="popular_movies">Popular movies at the moment</string>
+    <string name="top_playing">Top Playing Movies</string>
+    <string name="upcoming_movies">Upcoming movies to look out for</string>
 </resources>
