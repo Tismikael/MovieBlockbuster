@@ -4,4 +4,9 @@
     <string name="popular_movies">Popular movies at the moment</string>
     <string name="top_playing">Top Playing Movies</string>
     <string name="upcoming_movies">Upcoming movies to look out for</string>
+    <string name="top_shows_airing">Top Shows Airing Today</string>
+    <string name="tv_shows_on_the_air">TV shows On The Air</string>
+    <string name="popular_right_now">Popular Right Now</string>
+    <string name="top_rated_tv_shows">Top Rated TV shows</string>
+    <string name="search_here_for_shows_or_movies">Search here for shows or movies</string>
 </resources>

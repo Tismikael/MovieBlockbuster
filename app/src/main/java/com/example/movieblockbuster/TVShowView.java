@@ -1,32 +1,27 @@
 package com.example.movieblockbuster;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.squareup.picasso.Picasso;
 
-import org.w3c.dom.Text;
-
-public class FilmView extends LinearLayout {
+public class TVShowView extends LinearLayout {
 
 
-    public FilmView(Context context) {
+    public TVShowView(Context context) {
         super(context);
         init();
     }
 
-    private void init() {
-        this.setOrientation(LinearLayout.VERTICAL);
-    }
+    private void init() { this.setOrientation(LinearLayout.VERTICAL);}
 
-    public void addFilm(Film film){
-
+    public void addTvShow(Film film){
         // Inflate layout
-        View filmItem= LayoutInflater.from(getContext()).inflate(R.layout.movie_info, this, false);
+        View movieItem= LayoutInflater.from(getContext()).inflate(R.layout.movie_info, this, false);
 
         // create Views
         TextView titleView = findViewById(R.id.film_title);
@@ -58,8 +53,5 @@ public class FilmView extends LinearLayout {
                 readAllView.setText("Read All");
             }
         });
-
     }
 }
-
-
