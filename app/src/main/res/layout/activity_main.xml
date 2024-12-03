@@ -7,7 +7,7 @@
     android:background="@color/dark_gray"
     android:orientation="vertical">
 
-<!--    Main Groups-->
+    <!--    Main Groups-->
     <LinearLayout
         android:id="@+id/categories"
         android:layout_width="wrap_content"
@@ -54,141 +54,12 @@
         android:layout_marginVertical="10dp"
         android:background="@color/star_yellow" />
 
-    <!--    MOVIES OPTIONS-->
-    <LinearLayout
-        android:id="@+id/movie_options"
+    <FrameLayout
+        android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="visible">
-
-        <LinearLayout
-            android:id="@+id/movies_upperrow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginBottom="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Current"
-                android:textColor="@color/star_yellow"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:layout_marginEnd="10dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Popular"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginStart="10dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/movies_lowerarrow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Top Playing"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:layout_marginEnd="10dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Upcoming"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:layout_marginStart="10dp"/>
-
-        </LinearLayout>
+        android:layout_height="match_parent"/>
 
 
-    </LinearLayout>
-
-    <!--    TV SHOWS OPTIONS -->
-
-    <LinearLayout
-        android:id="@+id/shows_options"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="gone">
-
-        <LinearLayout
-            android:id="@+id/tvshow_upperrow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginBottom="10dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Currently Airing"
-                android:textColor="@color/star_yellow"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:layout_marginEnd="10dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="On The Air"
-                android:textColor="@color/white"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:layout_marginStart="10dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/tvshow_lowerarrow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:layout_marginBottom="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Popular"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:layout_marginEnd="10dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Top Rated"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                android:layout_marginStart="10dp"/>
-
-        </LinearLayout>
-
-
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -223,7 +94,12 @@
 
     </LinearLayout>
 
+<!--    <FrameLayout-->
+<!--        android:id="@+id/fragment_container"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"/>-->
 
 
 
 </LinearLayout>
+
