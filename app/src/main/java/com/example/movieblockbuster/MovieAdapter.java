@@ -102,12 +102,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         MovieViewHolder(View itemView) {
             super(itemView);
 
-            title = itemView.findViewById(R.id.film_title);
-            releaseDate = itemView.findViewById(R.id.release_date);
+            title = itemView.findViewById(R.id.movie_title);
+            releaseDate = itemView.findViewById(R.id.movie_release_date);
             duration = itemView.findViewById(R.id.duration);
-            overview = itemView.findViewById(R.id.description);
-            voteAverage = itemView.findViewById(R.id.rating);
-            poster = itemView.findViewById(R.id.poster);
+            overview = itemView.findViewById(R.id.movie_description);
+            voteAverage = itemView.findViewById(R.id.movie_rating);
+            poster = itemView.findViewById(R.id.movie_poster);
         }
     }
 }

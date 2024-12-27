@@ -1,7 +1,5 @@
 package com.example.movieblockbuster;
 
-import android.os.Parcel;
-import android.os.Parcelable;
 import com.google.gson.annotations.SerializedName;
 
 
@@ -25,10 +23,16 @@ public class Film {
     @SerializedName("vote_average")
     private double voteAverage;
 
+    @SerializedName("name")
+    private String name;
+
+    @SerializedName("first_air_date")
+    private String firstAirDate;
+
     //Default constructor
     public Film(){}
 
-    public Film(String title, String releaseDate, String duration, String posterPath, String description, float rating){
+    public Film(String title, String releaseDate, String duration, String posterPath, String description, float rating, String name, String firstAirDate){
         this.title = title;
 //        this.category = category;
         this.releaseDate = releaseDate;
@@ -36,6 +40,8 @@ public class Film {
         this.posterPath = posterPath;
         this.overview = description;
         this.voteAverage = rating;
+        this.name = name;
+        this.firstAirDate = firstAirDate;
     }
 
 
@@ -64,36 +70,13 @@ public class Film {
     public double getVoteAverage() { return voteAverage; }
 
     public void setVoteAverage(double voteAverage) { this.voteAverage = voteAverage; }
+
+    public String getName() { return name; }
+
+    public void setName(String name) { this.name = name; }
+
+    public String getFirstAirDate() { return firstAirDate; }
+
+    public void setFirstAirDate(String firstAirDate) { this.firstAirDate = firstAirDate; }
 }
 
-
-//    protected Film(Parcel in){
-//        title = in.readString();
-////        category = in.readString();
-//        releaseDate = in.readString();
-//        duration = in.readString();
-//        imageUrl = in.readString();
-//        description = in.readString();
-//        rating = in.readFloat();
-//    }
-
-//    public static final Parcelable.Creator<Film> CREATOR = new Parcelable.Creator<Film>() {
-//        @Override
-//        public Film createFromParcel(Parcel in) { return new Film(in); }
-//
-//        @Override
-//        public Film[] newArray(int i) {
-//            return new Film[0];
-//        }
-//
-//    };
-//
-//    public void writeToParcel(Parcel dest){
-//        dest.writeString(title);
-////        dest.writeString(category);
-//        dest.writeString(releaseDate);
-//        dest.writeString(duration);
-//        dest.writeString(imageUrl);
-//        dest.writeString(description);
-//        dest.writeFloat(rating);
-//    }

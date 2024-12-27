@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:paddingHorizontal="10dp"
     android:paddingVertical="10dp"
-    android:id="@+id/movie"
+    android:id="@+id/show"
     android:background="@color/dark_gray">
 
     <LinearLayout
@@ -18,7 +18,7 @@
         android:layout_marginEnd="5dp">
 
         <TextView
-            android:id="@+id/movie_title"
+            android:id="@+id/show_name"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="One Piece: Fan Letter"
@@ -33,31 +33,38 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/category"
+                android:id="@+id/show_category"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TV Short"
+                android:text="TV Series"
                 android:textColor="@color/white"
-                android:visibility="gone"
+                android:layout_marginEnd="10dp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Aired: "
+                android:textColor="@color/white"
                 android:layout_marginEnd="10dp"/>
 
             <TextView
-                android:id="@+id/movie_release_date"
+                android:id="@+id/show_first_aired"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="2024-10-22"
                 android:textColor="@color/white"
                 android:layout_marginEnd="10dp"/>
 
-            
-            <TextView
-                android:id="@+id/duration"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="25m"
-                android:textColor="@color/white"/>
-
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -65,12 +72,12 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/movie_poster"
+                android:id="@+id/show_poster"
                 android:layout_width="170dp"
                 android:layout_height="225dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-               />
+                />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -91,7 +98,7 @@
                 </HorizontalScrollView>
 
                 <TextView
-                    android:id="@+id/movie_description"
+                    android:id="@+id/show_description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="
@@ -130,7 +137,7 @@ Two years after the Paramount War, the Straw Hats are about to reunite on the Sa
                 android:layout_marginTop="5dp"/>
 
             <TextView
-                android:id="@+id/movie_rating"
+                android:id="@+id/show_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="9.4"

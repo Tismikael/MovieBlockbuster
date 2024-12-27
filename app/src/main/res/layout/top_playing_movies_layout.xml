@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:textColor="@color/star_yellow"
-    android:textStyle="bold"
-    android:gravity="center_horizontal"
-    android:layout_marginTop="20dp"
-    android:textSize="18sp"
-    android:text="Here are the Top Playing Movies" />
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- TextView displaying the header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/star_yellow"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:textSize="18sp"
+        android:text="Here are the Top Rated Movies" />
+
+    <!-- RecyclerView displaying the list of movies -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/top_rated_movies_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+
+</LinearLayout>
