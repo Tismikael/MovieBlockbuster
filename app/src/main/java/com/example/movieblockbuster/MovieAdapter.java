@@ -34,11 +34,13 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     @Override
     public MovieViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.movie_info, parent, false);
+
         return new MovieViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MovieViewHolder holder, int position) {
+
         Film film = films.get(position);
 
         // Set title
@@ -88,6 +90,17 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
             Log.d("imageurl", "Loading image url: " + imageUrl);
         }
 
+        holder.readMore.setOnClickListener(v -> {
+            if (holder.overview.getMaxLines() == 5) {
+                holder.overview.setMaxLines(100);
+                holder.readMore.setText("Read Less");
+            } else {
+                holder.overview.setMaxLines(5);
+                holder.readMore.setText("Read More");
+            }
+        });
+
+
     }
 
     @Override
@@ -96,7 +109,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     }
 
     static class MovieViewHolder extends RecyclerView.ViewHolder {
-        TextView title, releaseDate, duration, overview, voteAverage;
+        TextView title, releaseDate, duration, overview, voteAverage, readMore;
         ImageView poster;
 
         MovieViewHolder(View itemView) {
@@ -108,6 +121,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
             overview = itemView.findViewById(R.id.movie_description);
             voteAverage = itemView.findViewById(R.id.movie_rating);
             poster = itemView.findViewById(R.id.movie_poster);
+            readMore = itemView.findViewById(R.id.movie_readAll);
+
         }
     }
 }

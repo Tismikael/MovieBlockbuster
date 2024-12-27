@@ -5,7 +5,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -16,6 +19,9 @@ public class MovieFragment extends Fragment {
     private TextView moviePopular;
     private TextView movieTopPlaying;
     private TextView movieUpcoming;
+    private TextView searchMovie;
+    private EditText movieResult;
+    String movieName;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -25,6 +31,8 @@ public class MovieFragment extends Fragment {
         moviePopular = view.findViewById(R.id.movie_popular);
         movieTopPlaying = view.findViewById(R.id.movie_top_playing);
         movieUpcoming = view.findViewById(R.id.movie_upcoming);
+        searchMovie = view.findViewById(R.id.search_movie);
+        movieResult = view.findViewById(R.id.movie_result);
 
         if (savedInstanceState == null) {
             loadFragment(new CurrentMovieFragment());
@@ -46,6 +54,18 @@ public class MovieFragment extends Fragment {
         movieUpcoming.setOnClickListener(v -> {
             loadFragment(new UpcomingMoviesFragment());
             setActiveTabColor("upcoming");
+        });
+
+        searchMovie.setOnClickListener(v -> {
+            movieName = movieResult.getText().toString().trim();
+            if (!movieName.isEmpty()){
+                SearchMoviesFragment fragment = SearchMoviesFragment.newInstance(movieName);
+                loadFragment(fragment);
+                setActiveTabColor("default");
+            }else {
+                Toast.makeText(getContext(), "Please enter a movie name", Toast.LENGTH_SHORT);
+            }
+
         });
 
         return view;
@@ -75,6 +95,8 @@ public class MovieFragment extends Fragment {
                 break;
             case "upcoming":
                 movieUpcoming.setTextColor(getResources().getColor(R.color.star_yellow));
+                break;
+            case "default":
                 break;
         }
     }

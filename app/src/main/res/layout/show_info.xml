@@ -87,7 +87,7 @@
                 <HorizontalScrollView
                     android:id="@+id/film_keywords"
                     android:layout_width="wrap_content"
-                    android:layout_height="50dp">
+                    android:layout_height="10dp">
 
                     <LinearLayout
                         android:id="@+id/keywords_layout"
@@ -107,7 +107,7 @@ Two years after the Paramount War, the Straw Hats are about to reunite on the Sa
                     android:maxLines="5"/>
 
                 <TextView
-                    android:id="@+id/readAll"
+                    android:id="@+id/show_readAll"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Read All"
@@ -159,12 +159,27 @@ Two years after the Paramount War, the Straw Hats are about to reunite on the Sa
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="See More"
+                android:text="Save Show"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:layout_marginTop="12dp"
                 android:layout_marginStart="100dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bookmark"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="5dp"/>
+
+            <ImageView
+                android:id="@+id/save_show"
+                android:layout_width="34dp"
+                android:layout_height="28dp"
+                android:src="@drawable/bookmarked"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="-7dp"/>
 
 
 

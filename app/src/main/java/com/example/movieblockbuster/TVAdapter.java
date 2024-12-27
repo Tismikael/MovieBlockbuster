@@ -66,6 +66,16 @@ public class TVAdapter extends RecyclerView.Adapter<TVAdapter.TvViewHolder> {
                      .into(holder.poster);
          }
 
+        holder.readMore.setOnClickListener(v -> {
+            if (holder.overview.getMaxLines() == 5) {
+                holder.overview.setMaxLines(100);
+                holder.readMore.setText("Read Less");
+            } else {
+                holder.overview.setMaxLines(5);
+                holder.readMore.setText("Read More");
+            }
+        });
+
     }
 
     @Override
@@ -73,7 +83,7 @@ public class TVAdapter extends RecyclerView.Adapter<TVAdapter.TvViewHolder> {
 
     static class TvViewHolder extends  RecyclerView.ViewHolder {
 
-        TextView name, overview, voteAverage, firstAirDate;
+        TextView name, overview, voteAverage, firstAirDate, readMore;
         ImageView poster;
 
         TvViewHolder(View itemView) {
@@ -84,6 +94,7 @@ public class TVAdapter extends RecyclerView.Adapter<TVAdapter.TvViewHolder> {
             voteAverage = itemView.findViewById(R.id.show_rating);
             firstAirDate = itemView.findViewById(R.id.show_first_aired);
             poster = itemView.findViewById(R.id.show_poster);
+            readMore = itemView.findViewById(R.id.show_readAll);
 
         }
     }
