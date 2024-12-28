@@ -13,5 +13,5 @@ MovieBlockBuster is an Android application that allows users see information on 
 2. Set Android emulator with APi 35 and run the project
 
 ### Visuals
-![Alt text](../app/src/main/res/drawable/app_visual.png)
+![Alt text](app/src/main/res/drawable/app_visual.png)
 
