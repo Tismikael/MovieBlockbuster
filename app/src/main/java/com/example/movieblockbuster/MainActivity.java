@@ -16,29 +16,29 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.create_account);
 
-        // Initialize category tabs
-        moviesCategory = findViewById(R.id.movies_category);
-        tvshowCategory = findViewById(R.id.tvshow_category);
-
-
-        // Initially load the MoviesFragment
-        if (savedInstanceState == null) {
-            loadFragment(new MovieFragment());
-            setActiveCategoryColor("movies");
-        }
-
-        // Set click listeners for category tabs (Movies, TV Shows)
-        moviesCategory.setOnClickListener(v -> {
-            loadFragment(new MovieFragment());
-            setActiveCategoryColor("movies");
-        });
-
-        tvshowCategory.setOnClickListener(v -> {
-            loadFragment(new TVShowFragment());
-            setActiveCategoryColor("tvshows");
-        });
+//        // Initialize category tabs
+//        moviesCategory = findViewById(R.id.movies_category);
+//        tvshowCategory = findViewById(R.id.tvshow_category);
+//
+//
+//        // Initially load the MoviesFragment
+//        if (savedInstanceState == null) {
+//            loadFragment(new MovieFragment());
+//            setActiveCategoryColor("movies");
+//        }
+//
+//        // Set click listeners for category tabs (Movies, TV Shows)
+//        moviesCategory.setOnClickListener(v -> {
+//            loadFragment(new MovieFragment());
+//            setActiveCategoryColor("movies");
+//        });
+//
+//        tvshowCategory.setOnClickListener(v -> {
+//            loadFragment(new TVShowFragment());
+//            setActiveCategoryColor("tvshows");
+//        });
     }
 
     // Method to load a fragment into the container

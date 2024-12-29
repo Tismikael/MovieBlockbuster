@@ -118,7 +118,7 @@ Two years after the Paramount War, the Straw Hats are about to reunite on the Sa
 
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
@@ -157,7 +157,7 @@ Two years after the Paramount War, the Straw Hats are about to reunite on the Sa
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:layout_marginTop="12dp"
-                android:layout_marginStart="100dp" />
+                android:layout_marginStart="40dp" />
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -170,7 +170,7 @@ Two years after the Paramount War, the Straw Hats are about to reunite on the Sa
             <ImageView
                 android:id="@+id/save_movie"
                 android:layout_width="34dp"
-                android:layout_height="28dp"
+                android:layout_height="34dp"
                 android:src="@drawable/bookmarked"
                 android:layout_marginTop="12dp"
                 android:layout_marginStart="5dp"
