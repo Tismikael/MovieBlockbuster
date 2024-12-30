@@ -18,7 +18,7 @@
         android:textStyle="bold"
         android:textSize="30sp" />
 
-<!--    user info fields-->
+    <!--    user info fields-->
     <LinearLayout
         android:layout_width="350dp"
         android:layout_height="550dp"
@@ -167,4 +167,3 @@
 
 
 </LinearLayout>
-

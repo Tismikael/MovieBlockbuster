@@ -8,8 +8,6 @@
     android:paddingHorizontal="10dp"
     android:paddingVertical="10dp"
     android:id="@+id/signIn">
-
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -17,8 +15,7 @@
         android:textColor="@color/dark_gray"
         android:textStyle="bold"
         android:textSize="30sp" />
-
-<!--    User info fields-->
+    <!--    User info fields-->
     <LinearLayout
         android:layout_width="350dp"
         android:layout_height="400dp"
@@ -26,9 +23,7 @@
         android:background="@drawable/rounded_box"
         android:layout_marginTop="40dp"
         android:layout_gravity="center">
-
-
-<!--        email address-->
+        <!--        email address-->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/sign_in_email"
             android:layout_width="300dp"
@@ -43,10 +38,7 @@
                 android:textColor="@color/dark_gray"
                 android:hint="@string/email_address"
                 android:textColorHint="@color/dark_gray"/>
-
         </com.google.android.material.textfield.TextInputLayout>
-
-
         <!--        password-->
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/sign_in_password"
@@ -57,7 +49,6 @@
             android:layout_gravity="center"
             app:passwordToggleEnabled="true"
             app:boxStrokeColor="@color/dark_gray">
-
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -65,9 +56,7 @@
                 android:hint="@string/password"
                 android:inputType="textPassword"
                 android:textColorHint="@color/dark_gray"/>
-
         </com.google.android.material.textfield.TextInputLayout>
-
         <Button
             android:id="@+id/create_account_button"
             android:layout_width="200dp"
@@ -76,7 +65,6 @@
             android:layout_gravity="center"
             android:backgroundTint="@color/gray"
             android:text="Sign In"/>
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -84,7 +72,6 @@
             android:layout_marginStart="60dp"
             android:orientation="horizontal"
             android:gravity="center_vertical">
-
             <!-- Static Text -->
             <TextView
                 android:layout_width="wrap_content"
@@ -92,7 +79,6 @@
                 android:text="@string/don_t_have_an_account"
                 android:textColorHint="@color/gray"
                 android:textColor="@color/black" />
-
             <!-- Clickable "Sign In" Text -->
             <TextView
                 android:id="@+id/sign_up_redirect"
@@ -103,10 +89,5 @@
                 android:clickable="true"
                 android:focusable="true" />
         </LinearLayout>
-
     </LinearLayout>
-
-
-
-
 </LinearLayout>
