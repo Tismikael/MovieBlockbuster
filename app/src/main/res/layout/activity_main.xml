@@ -7,12 +7,25 @@
     android:background="@color/dark_gray"
     android:orientation="vertical">
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sign_in_main"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:text="@string/sign_in"
+        android:textColor="@color/dark_gray"
+        android:textSize="15sp"
+        android:background="@drawable/rounded_button"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity="end"/>
+
+
     <!--    Main Groups-->
     <LinearLayout
         android:id="@+id/categories"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:orientation="horizontal">
 

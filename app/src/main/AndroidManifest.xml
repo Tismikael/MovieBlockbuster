@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MovieBlockbuster"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
@@ -24,6 +24,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".SignInActivity" />
+
+        <activity android:name=".CreateAccountActivity" />
     </application>
 
 </manifest>

@@ -58,13 +58,15 @@
                 android:textColorHint="@color/dark_gray"/>
         </com.google.android.material.textfield.TextInputLayout>
         <Button
-            android:id="@+id/create_account_button"
+            android:id="@+id/sign_in_button"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_gravity="center"
-            android:backgroundTint="@color/gray"
-            android:text="Sign In"/>
+            android:backgroundTint="@color/star_yellow"
+            android:textColor="@color/white"
+            android:text="@string/sign_in"/>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

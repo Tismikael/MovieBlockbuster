@@ -132,8 +132,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:layout_gravity="center"
-            android:backgroundTint="@color/gray"
-            android:text="Create Account"/>
+            android:textColor="@color/white"
+            android:backgroundTint="@color/star_yellow"
+            android:text="@string/create_account"/>
 
 
         <LinearLayout
@@ -154,12 +155,15 @@
 
             <!-- Clickable "Sign In" Text -->
             <TextView
-                android:id="@+id/tv_sign_in"
+                android:id="@+id/redirect_sign_in"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign In"
+                android:layout_marginStart="5dp"
+                android:text="@string/sign_in"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:clickable="true"
+                android:textSize="18sp"
                 android:focusable="true" />
         </LinearLayout>
 
