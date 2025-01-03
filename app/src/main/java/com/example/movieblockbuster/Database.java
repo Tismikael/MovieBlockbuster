@@ -30,7 +30,7 @@ public class Database {
         });
     }
 
+    public DatabaseReference getReference() { return reference; }
 
-
-
+    public void setReference(DatabaseReference reference) { this.reference = reference; }
 }
