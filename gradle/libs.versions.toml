@@ -1,5 +1,6 @@
 [versions]
 agp = "8.5.2"
+firebaseBom = "33.7.0"
 glide = "4.15.0"
 gson = "2.11.0"
 junit = "4.13.2"
@@ -12,8 +13,14 @@ constraintlayout = "2.2.0"
 picasso = "2.8"
 firebaseCrashlyticsBuildtools = "3.0.2"
 picassoVersion = "2.71828"
+googleGmsGoogleServices = "4.4.2"
+firebaseDatabase = "21.0.0"
+firebaseAuth = "23.1.0"
+playServicesRecaptcha = "17.1.0"
 
 [libraries]
+firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
+firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -26,7 +33,11 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 picasso = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }
 firebase-crashlytics-buildtools = { group = "com.google.firebase", name = "firebase-crashlytics-buildtools", version.ref = "firebaseCrashlyticsBuildtools" }
 picasso-v271828 = { module = "com.squareup.picasso:picasso", version.ref = "picassoVersion" }
+firebase-database = { group = "com.google.firebase", name = "firebase-database", version.ref = "firebaseDatabase" }
+firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+play-services-recaptcha = { module = "com.google.android.gms:play-services-recaptcha", version.ref = "playServicesRecaptcha" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+google-gms-google-services = { id = "com.google.gms.google-services", version.ref = "googleGmsGoogleServices" }
 

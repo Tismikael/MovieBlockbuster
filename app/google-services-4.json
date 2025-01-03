@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "125716447917",
+    "project_id": "movieblockbuster-a5800",
+    "storage_bucket": "movieblockbuster-a5800.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125716447917:android:8cbf79f5a3ecfe6a7abc24",
+        "android_client_info": {
+          "package_name": "com.example.movieblockbuster"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI8a5bTCy_85dt1470dFazxuypRbiLkPg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
