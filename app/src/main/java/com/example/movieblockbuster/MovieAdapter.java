@@ -1,5 +1,7 @@
 package com.example.movieblockbuster;
 
+import android.graphics.Movie;
+import android.media.Image;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,6 +23,9 @@ import java.util.List;
 public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
 
     private List<Film> films;
+    private ImageView saveImage;
+
+    private User user;
 
     public MovieAdapter(List<Film> films) {
         this.films = films;
@@ -80,13 +86,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
                     .error(R.drawable.one_piece_logo)
                     .into(holder.poster);
 
-//            Glide.with(holder.itemView.getContext())
-//                            .load(imageUrl)
-//                            .placeholder(R.drawable.one_piece_logo)
-//                            .error(R.drawable.one_piece_logo)
-//                            .override(170,225)
-//                            .into(holder.poster);
-
             Log.d("imageurl", "Loading image url: " + imageUrl);
         }
 
@@ -100,7 +99,73 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
             }
         });
 
+//        holder.presaveImage.setOnClickListener(this::saveMovie);
+//        holder.saveImage.setOnClickListener(this::unsaveMovie);
+        // Set visibility based on saved state
+        if (film.isSaved()) {
+            holder.presaveImage.setVisibility(View.GONE);
+            holder.saveImage.setVisibility(View.VISIBLE);
+        } else {
+            holder.presaveImage.setVisibility(View.VISIBLE);
+            holder.saveImage.setVisibility(View.GONE);
+        }
 
+        // Set the tag for identifying the position in saveMovie
+        holder.presaveImage.setTag(position);
+
+        // Attach click listener for presaveImage
+        holder.presaveImage.setOnClickListener(this::saveMovie);
+
+    }
+
+    private void unsaveMovie(View view) {
+        user = UserSession.getCurrentUser();
+        View parent = (View) view.getParent();
+        ImageView presaveImage = parent.findViewById(R.id.pre_save_movie);
+        ImageView saveImage = parent.findViewById(R.id.save_movie);
+
+        // Change visibility
+        if (presaveImage != null && saveImage != null){
+            presaveImage.setVisibility(View.VISIBLE);
+            saveImage.setVisibility(View.GONE);
+        }else {
+            Log.e("unsaveMovie","presaveImage or saveImage is null");
+        }
+
+        Toast.makeText(view.getContext(), "Movie unsaved successfully", Toast.LENGTH_SHORT).show();
+    }
+
+    private void saveMovie(View view) {
+        user = UserSession.getCurrentUser();
+        if (user == null){
+            Toast.makeText(view.getContext(), "you must be signed in to save this movie", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            // Get the position of the clicked item
+            int position = (int) view.getTag();
+            Film film = films.get(position);
+
+            // Update save state
+            film.setSaved(true);
+
+            // Refresh only the affected item
+            notifyItemChanged(position);
+
+            Toast.makeText(view.getContext(), "Movie saved successfully", Toast.LENGTH_SHORT).show();
+//            View parent = (View) view.getParent();
+//            ImageView presaveImage = parent.findViewById(R.id.pre_save_movie);
+//            ImageView saveImage = parent.findViewById(R.id.save_movie);
+//
+//            // Change visibility
+//            if (presaveImage != null && saveImage != null) {
+//                presaveImage.setVisibility(View.GONE);
+//                saveImage.setVisibility(View.VISIBLE);
+//            } else {
+//                Log.e("saveMovie", "presaveImage or saveImage is null");
+//            }
+//
+//            Toast.makeText(view.getContext(), "Movie saved successfully", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
@@ -110,7 +175,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
 
     static class MovieViewHolder extends RecyclerView.ViewHolder {
         TextView title, releaseDate, duration, overview, voteAverage, readMore;
-        ImageView poster;
+        ImageView poster, presaveImage, saveImage;
 
         MovieViewHolder(View itemView) {
             super(itemView);
@@ -122,7 +187,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
             voteAverage = itemView.findViewById(R.id.movie_rating);
             poster = itemView.findViewById(R.id.movie_poster);
             readMore = itemView.findViewById(R.id.movie_readAll);
-
+            presaveImage = itemView.findViewById(R.id.pre_save_movie);
+            saveImage = itemView.findViewById(R.id.save_movie);
         }
     }
 }

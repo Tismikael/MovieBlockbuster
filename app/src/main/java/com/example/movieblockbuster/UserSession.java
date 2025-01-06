@@ -9,6 +9,7 @@ public class UserSession {
 
         if (user != null){
             currentUser = user;
+            Log.d("session", "successful login");
         }else{
             Log.e("UserSession", "Attempted to login with null user");
         }

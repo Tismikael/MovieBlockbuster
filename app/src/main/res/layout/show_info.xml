@@ -156,22 +156,23 @@ Two years after the Paramount War, the Straw Hats are about to reunite on the Sa
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="10dp"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Save Show"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:layout_marginTop="12dp"
-                android:layout_marginStart="40dp" />
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Save Show"-->
+<!--                android:textSize="20sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:layout_marginStart="40dp" />-->
 
             <ImageView
+                android:id="@+id/pre_save_show"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/bookmark"
                 android:layout_marginTop="12dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="180dp"
                 android:visibility="visible"/>
 
             <ImageView
@@ -180,7 +181,7 @@ Two years after the Paramount War, the Straw Hats are about to reunite on the Sa
                 android:layout_height="34dp"
                 android:src="@drawable/bookmarked"
                 android:layout_marginTop="12dp"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="180dp"
                 android:visibility="gone"/>
 
 

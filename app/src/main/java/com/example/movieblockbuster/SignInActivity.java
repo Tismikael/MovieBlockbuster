@@ -43,8 +43,6 @@ public class SignInActivity extends AppCompatActivity{
         setContentView(R.layout.sign_in);
 
         mAuth = FirebaseAuth.getInstance();
-        database = new Database();
-
         redirect = findViewById(R.id.sign_up_redirect);
 
         redirect.setOnClickListener(v -> {
@@ -58,6 +56,9 @@ public class SignInActivity extends AppCompatActivity{
     }
 
     private void signIn(View view) {
+
+        database = new Database();
+
         TextInputLayout emailLayout = findViewById(R.id.sign_in_email);
         TextInputEditText emailLayoutText = (TextInputEditText) emailLayout.getEditText();
         email = emailLayoutText.getText().toString();
@@ -81,14 +82,18 @@ public class SignInActivity extends AppCompatActivity{
                             String userId = user.getUid();
                             Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show();
 
-                            DatabaseReference reference = database.getReference();
+                            database.setUserReference();
 
-                            reference.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
+                            DatabaseReference userReference = database.getReference();
+                            userReference.child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                                     if (snapshot.exists()) {
                                         firstName = snapshot.child("firstName").getValue(String.class);
                                         lastName = snapshot.child("lastName").getValue(String.class);
+
+                                        Log.d("firstname", firstName);
+                                        Log.d("lastname", lastName);
 
                                         // user session login
                                         UserSession.login(new User(firstName, lastName, email, userId));

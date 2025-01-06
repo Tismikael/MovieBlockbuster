@@ -29,6 +29,8 @@ public class Film {
     @SerializedName("first_air_date")
     private String firstAirDate;
 
+    private boolean isSaved;
+
     //Default constructor
     public Film(){}
 
@@ -42,6 +44,7 @@ public class Film {
         this.voteAverage = rating;
         this.name = name;
         this.firstAirDate = firstAirDate;
+        this.isSaved = false;
     }
 
 
@@ -78,5 +81,9 @@ public class Film {
     public String getFirstAirDate() { return firstAirDate; }
 
     public void setFirstAirDate(String firstAirDate) { this.firstAirDate = firstAirDate; }
+
+    public boolean isSaved() { return isSaved; }
+
+    public void setSaved(boolean saved) { isSaved = saved; }
 }
 

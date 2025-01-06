@@ -8,6 +8,8 @@ public class User {
     private String email;
     private String id;
     private String profilePictureUrl;
+    private boolean isSaved; // New field to track save state
+
 
     // default constructor
     public User() {}
@@ -41,4 +43,8 @@ public class User {
     public String getProfilePictureUrl() { return profilePictureUrl; }
 
     public void setProfilePictureUrl(String profilePictureUrl) { this.profilePictureUrl = profilePictureUrl; }
+
+    public boolean isSaved() { return isSaved; }
+
+    public void setSaved(boolean saved) { isSaved = saved; }
 }
